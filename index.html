@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body  class="bg">
+   <div class="box">
+
+      <div class="top">
+        <div class="top-right">Encryption</div>
+        <div class="top-left">Decryption</div>
+      </div>
+
+      <div class="input">
+        <div class="right-input">
+            <p>Enter any text to be Encrypted:</p>
+            <textarea id="enc-input" class="input-text"></textarea>
+        </div>
+        <div class="left-input">
+            <p>Enter the text to Decrypt:</p>
+            <textarea id="dec-input" class="input-text"></textarea>
+        </div>
+      </div>
+
+      <div class="key">
+        <div class="encrypt-key" >
+            <p>Enter Key:</p>
+            <textarea id="encryption-key" class="input-key"></textarea>
+            <button onclick="encrypt()" id="compute">Encrypt</button>
+        </div>
+        <div class="decrypt-key" >
+            <p>Enter Key:</p>
+            <textarea  id="decryption-key" class="input-key"></textarea>
+            <button onclick="decrypt()" id="compute">Decrypt</button>
+        </div>
+      </div>
+
+      <div class="output">
+        <div class="right-output">
+            <p>Encrypted Text:</p>
+            <textarea id="enc-output" class="output-text"></textarea>
+        </div>
+        <div class="left-output">
+            <p>Decrypted Text:</p>
+            <textarea id="dec-output" class="output-text"></textarea>
+        </div>
+      </div>
+
+   </div>
+</body>
+<script src="script.js"></script>
+</html>
