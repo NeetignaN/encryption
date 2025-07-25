@@ -24,16 +24,11 @@ function xorEncrypt(text, key) {
 }
 
 function xorDecrypt(hexString, key) {
-    let encrypted = "";
+    let decrypted = "";
     for (let i = 0; i < hexString.length; i += 2) {
         const hexCharCode = parseInt(hexString.substr(i, 2), 16);
-        encrypted += String.fromCharCode(hexCharCode);
-    }
-    let decrypted = "";
-    for (let i = 0; i < encrypted.length; i++) {
-        const encryptedCharCode = encrypted.charCodeAt(i);
-        const keyCharCode = key.charCodeAt(i % key.length);
-        const decryptedCharCode = encryptedCharCode ^ keyCharCode;
+        const keyCharCode = key.charCodeAt(i / 2 % key.length);
+        const decryptedCharCode = hexCharCode ^ keyCharCode;
         decrypted += String.fromCharCode(decryptedCharCode);
     }
     return decrypted;
